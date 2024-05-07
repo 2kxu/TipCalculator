@@ -5,4 +5,5 @@
     <string name="Tip_Text">Tip (%)</string>
 
     <string name="bill_amount_Text">Tip Amount: %s</string>
+    <string name="round_figure">Round Figure</string>
 </resources>
