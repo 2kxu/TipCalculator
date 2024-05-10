@@ -5,7 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.DrawableRes
+import androidx.annotation.OpenForTesting
 import androidx.annotation.StringRes
+import androidx.annotation.VisibleForTesting
 //import androidx.compose.foundation.gestures.ModifierLocalScrollableContainerProvider.value
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -183,7 +185,8 @@ fun RoundFigureToggle(modifier: Modifier = Modifier,
 }
 
 // Calculation Logic
-private fun calcAmount (amount1: Double, tipPer: Double = 15.0, roundFigure: Boolean): String{
+    @VisibleForTesting
+    internal fun calcAmount (amount1: Double, tipPer: Double = 15.0, roundFigure: Boolean): String{
      var tip = tipPer / 100 * amount1
     if(roundFigure){
         tip = kotlin.math.ceil(tip)
